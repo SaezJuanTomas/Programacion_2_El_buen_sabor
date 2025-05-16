@@ -9,6 +9,7 @@ public class Cliente {
     private LocalDate fechaNacimiento;
     private Usuario usuario;
     private Imagen imagen;
+    private HashSet<Domicilio> domicilios;
     private HashSet<Pedido> pedidos;
 
     public Cliente() {
@@ -94,6 +95,22 @@ public class Cliente {
         }
         pedidos.add(pedido);
     }
+
+    public void agregarDomicilio(Domicilio domicilio) {
+        if (domicilios == null) {
+            domicilios = new HashSet<>();
+        }
+        domicilios.add(domicilio);
+    }
+
+    public HashSet<Domicilio> getDomicilios() {
+        return domicilios;
+    }
+
+    public void setDomicilios(HashSet<Domicilio> domicilios) {
+        this.domicilios = domicilios;
+    }
+
 
     @Override
     public String toString() {

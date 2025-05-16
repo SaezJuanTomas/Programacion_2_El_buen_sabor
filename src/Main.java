@@ -1,8 +1,6 @@
-import com.sun.source.tree.NewArrayTree;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.OptionalInt;
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -25,9 +23,11 @@ public class Main {
         Usuario usuario1 = new Usuario("123", "JuanSaez");
         Imagen imagen1 = new Imagen("https://example.com/image.jpg");
         Cliente cliente1 = new Cliente("Juan", "Saez", "2613639999", "Saezjuan@gmail.com", LocalDate.of(1990, 1, 1), usuario1, imagen1);
+        cliente1.agregarDomicilio(domicilio1);
 
         Usuario usuario2 = new Usuario("125", "Tomas");
         Cliente cliente2 = new Cliente("Tomas", "Olivera", "2613639999", "Tomasolivera@gmail.com", LocalDate.of(1990, 1, 1), usuario1, imagen1);
+        cliente2.agregarDomicilio(domicilio2);
 
         ArtuculoInsumo articuloInsumo1 = new ArtuculoInsumo("Pan", 100.0, new UnidadMedida("kg"), 20.0, 200, 200, true);
         ArtuculoInsumo articuloInsumo2 = new ArtuculoInsumo("Carne", 100.0, new UnidadMedida("kg"), 50.0, 100, 200, true);
